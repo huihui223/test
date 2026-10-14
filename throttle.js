@@ -4,11 +4,15 @@
  * @param {Function} fn 需要节流的函数
  * @param {number} wait 间隔毫秒数
  * @param {Object} [options] 配置项
- * @param {boolean} [options.leading=true] 为 false 时不立即执行窗口开始时的调用
+ * @param {boolean} [options.leading=true] 为 false 时首个周期的首次调用不立即执行
  * @param {boolean} [options.trailing=true] 为 false 时不补发窗口结束时的最后一次调用
  * @returns {Function} 节流后的函数：立即执行的调用透传 fn 的返回值，窗口内的调用无同步结果返回 undefined；
  *   带 cancel() 取消待执行的尾部调用、flush() 立即执行待发的尾部调用并返回结果
  * @throws {TypeError} fn 非函数、wait 非有限非负数或 options 非对象时抛出
+ *
+ * 实现说明：时间戳判断 + 定时器补发——调用时用 shouldInvoke 判断是否脱离上一执行周期，
+ * 周期外立即执行（leading:false 的首次调用仅记为周期起点），周期内只记录最后一次调用的参数；
+ * 定时器到点在周期边界补发，连续调用时定时器只安排不重建，补发以周期边界为新起点消除累积漂移。
  */
 function throttle(fn, wait, options) {
   if (typeof fn !== 'function') {
@@ -26,69 +30,82 @@ function throttle(fn, wait, options) {
   const leading = options.leading !== false;
   const trailing = options.trailing !== false;
 
-  let previous = 0;      // 当前周期起点的毫秒时间戳，0 表示尚未开始
-  let timer = null;      // 尾部补发的定时器
-  let lastArgs = null;
+  let timerId = null;       // 补发定时器，null 表示当前周期没有安排补发
+  let lastArgs = null;      // 最后一次调用的参数，null 表示没有待发的调用
   let lastThis = null;
+  let lastInvokeTime = 0;   // 上次执行 fn 的毫秒时间戳，0 表示尚未开始
 
-  // 执行 fn 并以 at 为新周期起点，同时清理定时器与待发的尾部调用
-  const invoke = function (thisArg, args, at) {
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-    previous = at;
+  // 执行 fn，清空待发状态，并以 time 作为新周期起点
+  const invokeFunc = function (time) {
+    const args = lastArgs;
+    const thisArg = lastThis;
     lastArgs = lastThis = null;
+    lastInvokeTime = time;
     return fn.apply(thisArg, args);
   };
 
-  const throttled = function (...args) {
-    const now = Date.now();
-    // leading:false 且尚未执行过时，以本次调用时刻为窗口起点，本次不立即执行
-    if (previous === 0 && !leading) {
-      previous = now;
-    }
-    const remaining = wait - (now - previous);
+  // time 时刻是否已脱离上一个执行周期：距上次执行满 wait（首次或时钟回拨视为满足）
 
-    if (remaining <= 0) {
-      // 窗口外：立即执行并开启新周期
-      return invoke(this, args, now);
-    }
 
-    // 窗口内：trailing:false 时直接丢弃本次调用
-    if (!trailing) {
-      return undefined;
-    }
-
-    // 窗口内：记录最后一次调用的参数，安排在窗口结束时补发
-    lastArgs = args;
-    lastThis = this;
-    if (!timer) {
-      timer = setTimeout(() => {
-        // 以预定触发点作为新周期起点，消除定时器延迟造成的累积漂移
-        invoke(lastThis, lastArgs, previous + wait);
-      }, remaining);
+  // 补发定时器到点：以周期边界为新周期起点补发最后一次调用，消除定时器延迟造成的累积漂移
+  const timerExpired = function () {
+    timerId = null;
+    if (lastArgs !== null) {
+      return invokeFunc(lastInvokeTime + wait);
     }
     return undefined;
   };
 
-  // 手动取消尚未执行的尾部调用
-  throttled.cancel = function () {
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
+  const throttled = function (...args) {
+    const time = Date.now();
+
+    if (shouldInvoke(time)) {
+      lastArgs = args;
+      lastThis = this;
+      // 首次调用且 leading:false：以本次调用为周期起点，本次不立即执行
+      // （wait 为 0 时窗口长度为零，仍立即执行）
+      if (lastInvokeTime === 0 && !leading && wait > 0) {
+        if (trailing) {
+          timerId = setTimeout(timerExpired, wait);
+        }
+        return undefined;
+      }
+      // 周期外：立即执行并开启新周期
+      return invokeFunc(time);
     }
-    previous = 0;
+
+    // 周期内：trailing:false 时直接丢弃本次调用
+    if (!trailing) {
+      return undefined;
+    }
+    // 周期内：记录最后一次调用的参数，安排在周期边界补发
+    lastArgs = args;
+    lastThis = this;
+    if (timerId === null) {
+      timerId = setTimeout(timerExpired, wait - (time - lastInvokeTime));
+    }
+    return undefined;
+  };
+
+  // 手动取消尚未执行的尾部调用，状态完全复位
+  throttled.cancel = function () {
+    if (timerId !== null) {
+      clearTimeout(timerId);
+    }
+    timerId = null;
     lastArgs = lastThis = null;
+    lastInvokeTime = 0;
   };
 
   // 立即执行待发的尾部调用并返回其结果，无待发时不动作返回 undefined
   throttled.flush = function () {
-    if (!timer) {
+    if (timerId === null || lastArgs === null) {
       return undefined;
     }
-    // flush 是手动提前触发，从真实执行时刻开启新窗口
-    return invoke(lastThis, lastArgs, Date.now());
+    clearTimeout(timerId);
+    timerId = null;
+    // flush 是手动提前触发，从真实执行时刻开启新周期
+    return invokeFunc(Date.now());
   };
 
   return throttled;
