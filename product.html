@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora One 头戴式无线降噪耳机：四麦克风双馈降噪、42dB 深度、40 小时续航、单耳 4.8g，含原理、数据、规格与包装清单。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236a8dff'/%3E%3Cstop offset='1' stop-color='%238f6aff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='28' font-weight='600' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <title>Aurora One 无线降噪耳机 · 商品介绍</title>
+  <style>
+    :root {
+      --bg-start: #f6f7f9;
+      --bg-end: #eef0f4;
+      --card-bg: #ffffff;
+      --text: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --border: rgba(0, 0, 0, 0.08);
+      --bar-bg: rgba(246, 247, 249, 0.82);
+      --btn-bg: #f2f3f5;
+      --btn-hover: #e6e8ec;
+      --focus: #6a8dff;
+      --halo: rgba(106, 141, 255, 0.3);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-start: #1c1c1e;
+        --bg-end: #141416;
+        --card-bg: #2c2c2e;
+        --text: #f5f5f7;
+        --text-secondary: #a1a1a6;
+        --border: rgba(255, 255, 255, 0.1);
+        --bar-bg: rgba(28, 28, 30, 0.82);
+        --btn-bg: #3a3a3c;
+        --btn-hover: #48484a;
+        --focus: #8fb0ff;
+        --halo: rgba(143, 176, 255, 0.18);
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 72px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bar-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .anchors {
+      display: flex;
+      gap: 22px;
+    }
+
+    .anchors a {
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+    }
+
+    .anchors a:hover,
+    .anchors a[aria-current="true"] {
+      color: var(--text);
+    }
+
+    .anchors a[aria-current="true"] {
+      font-weight: 600;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+      padding: 96px 0 88px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6.5vw, 68px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .lede {
+      max-width: 32ch;
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .price strong {
+      font-size: clamp(28px, 3vw, 34px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 118%;
+      aspect-ratio: 1;
+      background: radial-gradient(closest-side, var(--halo), transparent 70%);
+      filter: blur(24px);
+      pointer-events: none;
+    }
+
+    .hero-visual svg {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    main {
+      counter-reset: section;
+    }
+
+    .section {
+      counter-increment: section;
+      padding: 96px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 32px;
+    }
+
+    .section h2::before {
+      content: counter(section, decimal-leading-zero);
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .pains {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .pain {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .pain-where {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .pain-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .solution {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .solution-text p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 46ch;
+    }
+
+    .solution-visual svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .solution-visual text {
+      font-size: 13px;
+      fill: var(--text-secondary);
+    }
+
+    .stats {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .stats li {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .stat-value {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-value small {
+      font-size: 0.36em;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-left: 4px;
+      color: var(--text-secondary);
+    }
+
+    .stat-label {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 48px;
+    }
+
+    .specs > div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .specs dt {
+      flex: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .specs dd {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .box-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px 28px;
+    }
+
+    .box-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .box-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+    }
+
+    .footer {
+      padding: 32px 0 48px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* 入场动画：.reveal 由脚本添加，脚本未执行时内容照常可见 */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .anchors a {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 64px 0 56px;
+      }
+
+      .hero-visual {
+        max-width: 400px;
+      }
+
+      .solution {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .pains {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .specs {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-visual svg {
+        max-width: 220px;
+      }
+
+      .anchors {
+        gap: 14px;
+      }
+
+      .anchors a {
+        font-size: 13px;
+      }
+
+      .specs dd {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">Aurora</a>
+      <nav class="anchors" aria-label="页面导航">
+        <a href="#pain">痛点</a>
+        <a href="#solution">方案</a>
+        <a href="#data">数据</a>
+        <a href="#specs">规格</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="eyebrow">头戴式无线降噪耳机</p>
+          <h1>Aurora One</h1>
+          <p class="lede">先把噪音抵消干净，再谈声音本身。</p>
+          <p class="price">
+            <span class="price-label">到手价</span>
+            <strong>¥1299</strong>
+          </p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 240" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6a8dff"></stop>
+                <stop offset="1" stop-color="#8f6aff"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M48 150 V120 a72 72 0 0 1 144 0 v30"
+              fill="none" stroke="url(#aurora)" stroke-width="10" stroke-linecap="round"></path>
+            <rect x="30" y="140" width="40" height="72" rx="20" fill="url(#aurora)"></rect>
+            <rect x="170" y="140" width="40" height="72" rx="20" fill="url(#aurora)"></rect>
+            <rect x="40" y="158" width="20" height="36" rx="10" fill="#ffffff" opacity="0.55"></rect>
+            <rect x="180" y="158" width="20" height="36" rx="10" fill="#ffffff" opacity="0.55"></rect>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section" id="pain">
+        <h2>你先听见的是这些</h2>
+        <ul class="pains">
+          <li class="pain">
+            <p class="pain-where">地铁车厢</p>
+            <p class="pain-text">轨道摩擦的持续低频轰鸣，音量推到七成，对面说话还是听不清。</p>
+          </li>
+          <li class="pain">
+            <p class="pain-where">开放办公室</p>
+            <p class="pain-text">键盘声、电话声、隔壁讨论声混成一片，想专注只能躲进会议室。</p>
+          </li>
+          <li class="pain">
+            <p class="pain-where">长途飞行</p>
+            <p class="pain-text">引擎的稳定白噪音压着耳朵，两小时就开始发胀耳鸣。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="solution">
+        <h2>降噪是怎么发生的</h2>
+        <div class="solution">
+          <div class="solution-text">
+            <p>耳罩内外共四颗麦克风：外侧的前馈麦克风先一步采集环境噪声，内侧的反馈麦克风补采贴耳处的残余声压。DSP 依据两者的差值生成相位相反的抗噪声波，与噪声在耳道口叠加抵消 —— 低频轰鸣先被抹掉，剩下的才是音乐本身。</p>
+          </div>
+          <div class="solution-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 240" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#6a8dff"></stop>
+                  <stop offset="1" stop-color="#8f6aff"></stop>
+                </linearGradient>
+              </defs>
+              <g fill="none" stroke="url(#wave)" stroke-width="3" stroke-linecap="round">
+                <path d="M110 70 q 20 -34 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0"></path>
+                <path d="M110 130 q 20 34 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0"></path>
+                <path d="M110 190 q 20 -4 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0"></path>
+              </g>
+              <g text-anchor="start">
+                <text x="20" y="75">环境噪声</text>
+                <text x="20" y="135">反相波</text>
+                <text x="20" y="195">抵消后</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="data">
+        <h2>落到数字上</h2>
+        <ul class="stats">
+          <li>
+            <p class="stat-value">42<small>dB</small></p>
+            <p class="stat-label">主动降噪深度</p>
+          </li>
+          <li>
+            <p class="stat-value">40<small>小时</small></p>
+            <p class="stat-label">开启降噪的单次续航</p>
+          </li>
+          <li>
+            <p class="stat-value">4.8<small>g</small></p>
+            <p class="stat-label">单耳重量</p>
+          </li>
+          <li>
+            <p class="stat-value">10<small>分钟</small></p>
+            <p class="stat-label">快充约换 3 小时播放</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="specs">
+        <h2>规格参数</h2>
+        <dl class="specs">
+          <div>
+            <dt>蓝牙版本</dt>
+            <dd>5.3</dd>
+          </div>
+          <div>
+            <dt>音频编解码</dt>
+            <dd>SBC / AAC / LDAC</dd>
+          </div>
+          <div>
+            <dt>降噪深度</dt>
+            <dd>最高 42dB</dd>
+          </div>
+          <div>
+            <dt>续航时间</dt>
+            <dd>40 小时（开启降噪）</dd>
+          </div>
+          <div>
+            <dt>快充</dt>
+            <dd>10 分钟约 3 小时</dd>
+          </div>
+          <div>
+            <dt>充电接口</dt>
+            <dd>USB-C</dd>
+          </div>
+          <div>
+            <dt>防护等级</dt>
+            <dd>IPX4</dd>
+          </div>
+          <div>
+            <dt>单耳重量</dt>
+            <dd>4.8g</dd>
+          </div>
+          <div>
+            <dt>频响范围</dt>
+            <dd>20Hz – 20kHz</dd>
+          </div>
+          <div>
+            <dt>多点连接</dt>
+            <dd>支持两台设备</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="box">
+        <h2>包装清单</h2>
+        <ul class="box-list">
+          <li>Aurora One 耳机主体 ×1</li>
+          <li>便携收纳盒 ×1</li>
+          <li>USB-C 充电线 ×1</li>
+          <li>硅胶耳塞 S / M / L ×3 对</li>
+          <li>3.5mm 音频线 ×1</li>
+          <li>快速入门指南 ×1</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© 2026 Aurora Audio · 本页为演示用商品介绍页，商品与价格均为示例数据。</div>
+  </footer>
+
+  <script>
+    (function () {
+      var targets = [].slice.call(document.querySelectorAll('.hero, main .section'));
+      var links = [].slice.call(document.querySelectorAll('.anchors a'));
+      var canObserve = 'IntersectionObserver' in window;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!canObserve || reduceMotion) return;
+
+      // 滚动进场：.reveal 由脚本添加，脚本不执行时页面照常完整可见
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+      targets.forEach(function (el) {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+      });
+
+      var navTargets = [].slice.call(document.querySelectorAll('main .section[id]'));
+      var onScreen = [];
+
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var i = onScreen.indexOf(entry.target);
+          if (entry.isIntersecting && i === -1) onScreen.push(entry.target);
+          if (!entry.isIntersecting && i > -1) onScreen.splice(i, 1);
+        });
+
+        var bandY = window.innerHeight / 2;
+        var current = null;
+        onScreen.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top <= bandY && r.bottom >= bandY) current = el;
+        });
+
+        links.forEach(function (link) {
+          if (current && link.getAttribute('href') === '#' + current.id) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+
+      navTargets.forEach(function (el) { navObserver.observe(el); });
+    })();
+  </script>
+</body>
+</html>
