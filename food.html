@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北纬九度 耶加雪菲 日晒 G1 精品咖啡豆：2050m 高海拔、Heirloom 原生种、Agtron 62 浅中烘、200g 单向排气阀袋装，含产地与烘焙背景、风味、数据、冲煮指引、适合人群与常见问题。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236a8dff'/%3E%3Cstop offset='1' stop-color='%238f6aff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='28' font-weight='600' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+  <title>耶加雪菲 日晒 G1 · 商品介绍</title>
+  <style>
+    :root {
+      --bg-start: #f6f7f9;
+      --bg-end: #eef0f4;
+      --card-bg: #ffffff;
+      --text: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --border: rgba(0, 0, 0, 0.08);
+      --bar-bg: rgba(246, 247, 249, 0.82);
+      --btn-bg: #f2f3f5;
+      --btn-hover: #e6e8ec;
+      --focus: #6a8dff;
+      --halo: rgba(106, 141, 255, 0.3);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-start: #1c1c1e;
+        --bg-end: #141416;
+        --card-bg: #2c2c2e;
+        --text: #f5f5f7;
+        --text-secondary: #a1a1a6;
+        --border: rgba(255, 255, 255, 0.1);
+        --bar-bg: rgba(28, 28, 30, 0.82);
+        --btn-bg: #3a3a3c;
+        --btn-hover: #48484a;
+        --focus: #8fb0ff;
+        --halo: rgba(143, 176, 255, 0.18);
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 72px;
+      background: var(--bg-end);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bar-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      flex: none;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .anchors {
+      display: flex;
+      gap: 22px;
+      min-width: 0;
+    }
+
+    .anchors a {
+      position: relative;
+      flex: none;
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+    }
+
+    /* 当前项下划线用伪元素，避免切换时文字宽度变化引起导航抖动 */
+    .anchors a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #6a8dff 0%, #8f6aff 100%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .anchors a:hover {
+      color: var(--text);
+    }
+
+    .anchors a[aria-current="true"] {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .anchors a[aria-current="true"]::after {
+      opacity: 1;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+      padding: 96px 0 88px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6.5vw, 68px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .lede {
+      max-width: 36ch;
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .price strong {
+      font-size: clamp(28px, 3vw, 34px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero-meta {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+      padding: 0 22px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--btn-bg);
+      transition: background 0.2s ease, filter 0.2s ease, transform 0.12s ease;
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      border-color: transparent;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+      filter: brightness(1.07);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 118%;
+      aspect-ratio: 1;
+      background: radial-gradient(closest-side, var(--halo), transparent 70%);
+      filter: blur(24px);
+      pointer-events: none;
+    }
+
+    .hero-visual svg {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    main {
+      counter-reset: section;
+    }
+
+    .section {
+      counter-increment: section;
+      padding: 96px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 32px;
+    }
+
+    .section h2::before {
+      content: counter(section, decimal-leading-zero);
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .pains,
+    .flavors,
+    .pitfalls {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .flavors {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .pain,
+    .flavor,
+    .pitfall,
+    .origin-card,
+    .fit,
+    .review {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+      transition: border-color 0.25s ease;
+    }
+
+    .pain:hover,
+    .flavor:hover,
+    .pitfall:hover,
+    .origin-card:hover,
+    .fit:hover,
+    .review:hover {
+      border-top-color: rgba(106, 141, 255, 0.5);
+    }
+
+    .pain-where,
+    .flavor-name,
+    .pitfall-symptom,
+    .origin-name,
+    .fit-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .pain-text,
+    .flavor-text,
+    .pitfall-fix,
+    .origin-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* 产地与烘焙者：两列卡片 */
+    .origin,
+    .fits {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .origin-text + .origin-text {
+      margin-top: 12px;
+    }
+
+    /* 适合谁：正反两列，圆点用实心与空心区分 */
+    .fit-title {
+      margin-bottom: 16px;
+    }
+
+    .fit-list {
+      list-style: none;
+    }
+
+    .fit-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .fit-list li + li {
+      margin-top: 10px;
+    }
+
+    .fit-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+    }
+
+    .fit.unfit .fit-list li::before {
+      background: none;
+      border: 1.5px solid var(--text-secondary);
+      opacity: 0.7;
+    }
+
+    /* 买家评价：三列 */
+    .reviews {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .review-text {
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .review-meta {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .solution {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .solution-text p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 46ch;
+    }
+
+    .solution-text p + p {
+      margin-top: 16px;
+    }
+
+    .solution-visual svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .solution-visual text {
+      font-size: 13px;
+      fill: var(--text-secondary);
+    }
+
+    .stats {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .stats li {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .stat-value {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-value small {
+      font-size: 0.36em;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-left: 4px;
+      color: var(--text-secondary);
+    }
+
+    .stat-label {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .params {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0 28px;
+      margin-bottom: 48px;
+    }
+
+    .params li {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .param-value {
+      display: block;
+      font-size: clamp(22px, 2.6vw, 28px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .param-value small {
+      font-size: 0.5em;
+      font-weight: 500;
+      margin-left: 3px;
+      color: var(--text-secondary);
+    }
+
+    .param-label {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .step {
+      counter-increment: step;
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: #6a8dff;
+      margin-bottom: 8px;
+    }
+
+    .step-name {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .subhead {
+      margin: 56px 0 24px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 48px;
+    }
+
+    .specs > div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .specs dt {
+      flex: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .specs dd {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .faq {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      flex: none;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+    }
+
+    .faq[open] summary::after {
+      content: "\2212";
+      color: var(--text);
+    }
+
+    .faq summary:hover {
+      color: var(--text-secondary);
+    }
+
+    .faq p {
+      max-width: 68ch;
+      padding-bottom: 20px;
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .box-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px 28px;
+    }
+
+    .box-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .box-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+    }
+
+    .footer {
+      padding: 32px 0 48px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* 入场动画：.reveal 由脚本添加，脚本未执行时内容照常可见 */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .anchors a,
+      .anchors a::after,
+      .btn,
+      .pain,
+      .flavor,
+      .pitfall,
+      .origin-card,
+      .fit,
+      .review {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 64px 0 56px;
+      }
+
+      .hero-visual {
+        max-width: 400px;
+      }
+
+      .solution {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .pains,
+      .pitfalls {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .flavors,
+      .stats,
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .params {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 24px;
+        row-gap: 24px;
+      }
+
+      .specs {
+        grid-template-columns: 1fr;
+      }
+
+      .origin,
+      .fits {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .reviews {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+    }
+
+    /* 导航在窄屏改为横向滚动，隐藏滚动条，避免挤压换行 */
+    @media (max-width: 640px) {
+      .topbar-inner {
+        gap: 12px;
+      }
+
+      .anchors {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .anchors::-webkit-scrollbar {
+        display: none;
+      }
+
+      .anchors a {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-visual svg {
+        max-width: 220px;
+      }
+
+      .anchors {
+        gap: 16px;
+      }
+
+      .flavors,
+      .steps,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .params {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .specs dd {
+        text-align: left;
+      }
+
+      .faq summary {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">北纬九度</a>
+      <nav class="anchors" aria-label="页面导航">
+        <a href="#pain">痛点</a>
+        <a href="#solution">做法</a>
+        <a href="#origin">产地</a>
+        <a href="#flavor">风味</a>
+        <a href="#data">数据</a>
+        <a href="#brew">冲煮</a>
+        <a href="#fit">适合</a>
+        <a href="#specs">规格</a>
+        <a href="#reviews">评价</a>
+        <a href="#faq">问答</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="eyebrow">埃塞俄比亚 · 单一产区 · 日晒精品咖啡豆</p>
+          <h1>耶加雪菲 日晒 G1</h1>
+          <p class="lede">袋子上印的是烘焙日期，不是保质期。豆子只烘到浅中，柑橘、白桃和茉莉都留在杯子里。</p>
+          <p class="price">
+            <span class="price-label">200g 装到手价</span>
+            <strong>¥128</strong>
+          </p>
+          <p class="hero-meta">每袋印烘焙日期与批次 · 建议养豆 7 天 · 下单后 48 小时内发出</p>
+          <div class="btns">
+            <a class="btn btn-primary" href="#brew">看冲煮建议</a>
+            <a class="btn" href="#specs">规格与产地</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 240" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="gradBrew" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6a8dff"></stop>
+                <stop offset="1" stop-color="#8f6aff"></stop>
+              </linearGradient>
+            </defs>
+            <!-- 滤杯 -->
+            <path d="M52 70 L100 152 L140 152 L188 70 Z" fill="url(#gradBrew)" opacity="0.16"></path>
+            <path d="M52 70 L100 152 L140 152 L188 70 Z"
+              fill="none" stroke="url(#gradBrew)" stroke-width="8" stroke-linejoin="round"></path>
+            <ellipse cx="120" cy="70" rx="68" ry="15"
+              fill="none" stroke="url(#gradBrew)" stroke-width="8"></ellipse>
+            <!-- 滴落 -->
+            <circle cx="120" cy="174" r="5" fill="url(#gradBrew)"></circle>
+            <circle cx="120" cy="192" r="3.5" fill="url(#gradBrew)" opacity="0.7"></circle>
+            <circle cx="120" cy="205" r="2.5" fill="url(#gradBrew)" opacity="0.45"></circle>
+            <!-- 分享壶 -->
+            <path d="M66 210 a54 30 0 0 0 108 0 Z" fill="url(#gradBrew)" opacity="0.16"></path>
+            <path d="M66 210 a54 30 0 0 0 108 0 Z"
+              fill="none" stroke="url(#gradBrew)" stroke-width="8" stroke-linejoin="round"></path>
+            <path d="M66 210 H174" fill="none" stroke="url(#gradBrew)" stroke-width="8" stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section" id="pain">
+        <h2>以前喝到的，大多不是它本来的味道</h2>
+        <ul class="pains">
+          <li class="pain">
+            <p class="pain-where">袋子上找不到烘焙日期</p>
+            <p class="pain-text">只印保质期 18 个月，翻遍包装也说不清豆子是哪天烘的 —— 到手时往往已经放了三个月，冲出来只剩苦涩和纸板味。</p>
+          </li>
+          <li class="pain">
+            <p class="pain-where">同一支豆，两次冲出两种味道</p>
+            <p class="pain-text">水温、粉水比、研磨度全靠猜：今天刚好喝，明天就涩得皱眉。参数不固定，风味自然也稳定不下来。</p>
+          </li>
+          <li class="pain">
+            <p class="pain-where">风味描述像玄学</p>
+            <p class="pain-text">包装写着「柑橘、白桃、茉莉」，喝进嘴里只剩酸和苦，对不上号，也不知道该往哪个方向调。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="solution">
+        <h2>从一颗生豆到一杯咖啡</h2>
+        <div class="solution">
+          <div class="solution-text">
+            <p>豆子来自耶加雪菲科契尔产区，海拔 2050 米的老树原生种。全红果手工采摘后整颗日晒 18 天，果肉里的糖分在晒床上慢慢渗进豆心，这是它甜感和花香的地基。</p>
+            <p>烘焙只走到一爆结束后 45 秒下豆，豆温曲线刻意放缓发展期，把焦苦挡在门外。烘焙日期直接印在袋子上，建议养豆 7 天再开袋，45 天内喝完。</p>
+          </div>
+          <div class="solution-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 260" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="gradHeat" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#6a8dff"></stop>
+                  <stop offset="1" stop-color="#8f6aff"></stop>
+                </linearGradient>
+                <linearGradient id="gradFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#6a8dff" stop-opacity="0.24"></stop>
+                  <stop offset="1" stop-color="#8f6aff" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+              <!-- 坐标轴 -->
+              <path d="M84 190 H380 M84 190 V44"
+                fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round"></path>
+              <!-- 温度参考线 -->
+              <path d="M84 118 H380" fill="none" stroke="var(--border)"
+                stroke-width="2" stroke-dasharray="5 6"></path>
+              <!-- 曲线下方区域 -->
+              <path d="M84 186 C 136 168, 158 126, 206 100 S 284 78, 336 72 L336 190 L84 190 Z"
+                fill="url(#gradFill)" stroke="none"></path>
+              <!-- 烘焙温度曲线 -->
+              <path d="M84 186 C 136 168, 158 126, 206 100 S 284 78, 336 72"
+                fill="none" stroke="url(#gradHeat)" stroke-width="4" stroke-linecap="round"></path>
+              <!-- 一爆标记 -->
+              <path d="M284 78 V190" fill="none" stroke="var(--border)"
+                stroke-width="2" stroke-dasharray="5 6"></path>
+              <circle cx="284" cy="78" r="6" fill="url(#gradHeat)"></circle>
+              <!-- 下豆点 -->
+              <circle cx="336" cy="72" r="6" fill="url(#gradHeat)"></circle>
+              <g>
+                <text x="22" y="52">豆温</text>
+                <text x="20" y="122">150℃</text>
+                <text x="88" y="216">脱水</text>
+                <text x="152" y="216">美拉德</text>
+                <text x="268" y="216">一爆 +45s 下豆</text>
+                <text x="344" y="246">时间</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="origin">
+        <h2>这一袋是谁做的</h2>
+        <ul class="origin">
+          <li class="origin-card">
+            <p class="origin-name">产地 · 科契尔</p>
+            <p class="origin-text">生豆来自耶加雪菲科契尔的小农合作社，这批由 Tesfaye 一家单独交付。地块在海拔 2050 米，只收全红果，不混收邻家的豆子；我们每年从他们那儿拿的量就这么大，批次小，但干净。</p>
+          </li>
+          <li class="origin-card">
+            <p class="origin-name">烘焙 · 自家工坊</p>
+            <p class="origin-text">每批只烘 12 公斤，全程记录豆温曲线，一爆结束后 45 秒下豆。袋子上的批次号能一一对应到工坊的烘焙记录，想看这批的曲线，随时找我们要。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="flavor">
+        <h2>杯子里是什么味道</h2>
+        <ul class="flavors">
+          <li class="flavor">
+            <p class="flavor-name">前段 · 柑橘</p>
+            <p class="flavor-text">第一口是明亮的柠檬和橙皮酸质，不尖，落口后迅速回甘。</p>
+          </li>
+          <li class="flavor">
+            <p class="flavor-name">中段 · 白桃</p>
+            <p class="flavor-text">温度降到 55℃ 左右，核果类甜感浮上来，口感像稀释过的桃汁。</p>
+          </li>
+          <li class="flavor">
+            <p class="flavor-name">尾段 · 茉莉</p>
+            <p class="flavor-text">咽下之后鼻腔里留着白花香，是日晒处理带来的干净发酵感。</p>
+          </li>
+          <li class="flavor">
+            <p class="flavor-name">余韵 · 红茶</p>
+            <p class="flavor-text">杯底凉透后是淡淡红茶涩感，说明萃取没有过头的焦苦。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="data">
+        <h2>落到数字上</h2>
+        <ul class="stats">
+          <li>
+            <p class="stat-value">2050<small>m</small></p>
+            <p class="stat-label">种植海拔，昼夜温差大，糖分积累慢</p>
+          </li>
+          <li>
+            <p class="stat-value">62<small>Agtron</small></p>
+            <p class="stat-label">浅中烘焙度，保留花果香</p>
+          </li>
+          <li>
+            <p class="stat-value">10.5<small>%</small></p>
+            <p class="stat-label">生豆含水率，低于 11% 不易霉变</p>
+          </li>
+          <li>
+            <p class="stat-value">7<small>天</small></p>
+            <p class="stat-label">建议养豆期，之后风味开始打开</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="brew">
+        <h2>怎么冲，才喝得到这些味道</h2>
+        <ul class="params">
+          <li>
+            <p class="param-value">15<small>g</small></p>
+            <p class="param-label">粉量</p>
+          </li>
+          <li>
+            <p class="param-value">225<small>g</small></p>
+            <p class="param-label">总水量</p>
+          </li>
+          <li>
+            <p class="param-value">92<small>℃</small></p>
+            <p class="param-label">水温</p>
+          </li>
+          <li>
+            <p class="param-value">中细</p>
+            <p class="param-label">研磨度，约白砂糖粗细</p>
+          </li>
+          <li>
+            <p class="param-value">2:30</p>
+            <p class="param-label">总时长</p>
+          </li>
+        </ul>
+
+        <ol class="steps">
+          <li class="step">
+            <p class="step-name">先闷蒸</p>
+            <p class="step-text">注水 30g 刚好打湿粉床，等 30 秒。看到粉层鼓起来、不再冒大泡，说明豆子还在排气。</p>
+          </li>
+          <li class="step">
+            <p class="step-name">分段注水</p>
+            <p class="step-text">分两次把水注到 225g，每次从中心向外画小圈，别冲到滤纸边缘，粉床翻起来味道就乱了。</p>
+          </li>
+          <li class="step">
+            <p class="step-name">控时间</p>
+            <p class="step-text">2 分 30 秒前后流完最合适。明显超时就调粗一格研磨，太快则调细一格，一次只改一个变量。</p>
+          </li>
+        </ol>
+
+        <p class="subhead">喝起来不对，多半是这三件事</p>
+        <ul class="pitfalls">
+          <li class="pitfall">
+            <p class="pitfall-symptom">发苦、有焦味</p>
+            <p class="pitfall-fix">水温降到 90℃ 或研磨调粗一格，通常一口就能救回来。</p>
+          </li>
+          <li class="pitfall">
+            <p class="pitfall-symptom">酸得尖、水感薄</p>
+            <p class="pitfall-fix">研磨调细半格，或水温升到 93℃，让萃取更完整一些。</p>
+          </li>
+          <li class="pitfall">
+            <p class="pitfall-symptom">涩、喉咙发紧</p>
+            <p class="pitfall-fix">多半是细粉过多，换个磨或轻拍滤杯让细粉沉底再冲。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="fit">
+        <h2>适合谁，不太适合谁</h2>
+        <ul class="fits">
+          <li class="fit">
+            <p class="fit-title">适合你，如果</p>
+            <ul class="fit-list">
+              <li>你用手冲、法压或爱乐压，愿意为参数调一次研磨</li>
+              <li>你喜欢明亮的酸质和花果香，不追求厚重的焦苦</li>
+              <li>你打算在 45 天内把这 200g 喝完</li>
+            </ul>
+          </li>
+          <li class="fit unfit">
+            <p class="fit-title">可能不适合，如果</p>
+            <ul class="fit-list">
+              <li>你主要喝拿铁，或者习惯加糖加奶，花香会被盖住</li>
+              <li>你要的是醇厚焦糖、巧克力那一路的深烘口感</li>
+              <li>你习惯一次买半公斤放着慢慢喝</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="specs">
+        <h2>规格参数</h2>
+        <dl class="specs">
+          <div>
+            <dt>产区</dt>
+            <dd>埃塞俄比亚 耶加雪菲 科契尔</dd>
+          </div>
+          <div>
+            <dt>海拔</dt>
+            <dd>2050m</dd>
+          </div>
+          <div>
+            <dt>品种</dt>
+            <dd>Heirloom 原生种</dd>
+          </div>
+          <div>
+            <dt>处理法</dt>
+            <dd>日晒 18 天</dd>
+          </div>
+          <div>
+            <dt>等级</dt>
+            <dd>G1</dd>
+          </div>
+          <div>
+            <dt>烘焙度</dt>
+            <dd>浅中烘 Agtron 62</dd>
+          </div>
+          <div>
+            <dt>风味</dt>
+            <dd>柑橘 / 白桃 / 茉莉 / 红茶</dd>
+          </div>
+          <div>
+            <dt>净含量</dt>
+            <dd>200g</dd>
+          </div>
+          <div>
+            <dt>赏味期</dt>
+            <dd>烘焙后 45 天内风味最佳</dd>
+          </div>
+          <div>
+            <dt>建议冲煮</dt>
+            <dd>92℃ / 粉水比 1:15 / 2 分 30 秒</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="reviews">
+        <h2>喝过的人怎么说</h2>
+        <ul class="reviews">
+          <li class="review">
+            <p class="review-text">“头两次没冲对，酸得有点冲；照参数卡把研磨调粗一格才顺。袋子上的日期是真的，这点比什么都实在。”</p>
+            <p class="review-meta">陈 · 手冲 3 年，V60</p>
+          </li>
+          <li class="review">
+            <p class="review-text">“以前只喝超市的豆子，第一次知道咖啡可以不带苦味。温度降下来那会儿，桃子的甜最明显。”</p>
+            <p class="review-meta">小林 · 刚入门，法压壶</p>
+          </li>
+          <li class="review">
+            <p class="review-text">“冲给同事喝，都说像茶。凉下来之后杯底那股花香最清楚，我一般会留一口等它降温。”</p>
+            <p class="review-meta">Aki · 咖啡师，爱乐压</p>
+          </li>
+        </ul>
+        <p class="note">以上为演示文案，不是真实买家评价；正式上线时请替换成实际口碑。</p>
+      </section>
+
+      <section class="section" id="faq">
+        <h2>常见问题</h2>
+        <details class="faq">
+          <summary>为什么刚收到的豆子不能马上喝？</summary>
+          <p>刚下豆机三天内二氧化碳还在大量释放，冲出来容易发苦发涩、粉层也容易翻。建议养豆 7 天，风味最稳定的窗口是烘焙后 7 到 45 天。</p>
+        </details>
+        <details class="faq">
+          <summary>日晒和水洗有什么区别？</summary>
+          <p>日晒是整颗带果肉上晒床，甜感和发酵香更足；水洗去果肉后水槽发酵，酸质更干净明亮。这支是日晒，所以偏甜、偏花香，酸度也柔和一些。</p>
+        </details>
+        <details class="faq">
+          <summary>开封后怎么保存？</summary>
+          <p>不要放冰箱。原袋挤出空气、用封口夹夹紧，放在阴凉避光处，两周内喝完最好。冰箱的湿气和串味比氧化更伤豆子。</p>
+        </details>
+        <details class="faq">
+          <summary>没有手冲器具能做吗？</summary>
+          <p>可以。法压壶研磨调粗、浸泡 4 分钟后压下滤网；爱乐压用 88℃、1 分 30 秒；美式滴滤机直接按机器默认粉水比即可，风味会比手冲平一点。</p>
+        </details>
+      </section>
+
+      <section class="section" id="box">
+        <h2>包装清单</h2>
+        <ul class="box-list">
+          <li>咖啡熟豆 200g ×1（单向排气阀袋）</li>
+          <li>烘焙日期与批次标签 ×1</li>
+          <li>食品级封口夹 ×1</li>
+          <li>冲煮参数卡 ×1</li>
+          <li>产地溯源卡 ×1</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© 2026 北纬九度 · 本页为演示用商品介绍页，商品与价格均为示例数据。</div>
+  </footer>
+
+  <script>
+    (function () {
+      var targets = [].slice.call(document.querySelectorAll('.hero, main .section'));
+      var links = [].slice.call(document.querySelectorAll('.anchors a'));
+      var canObserve = 'IntersectionObserver' in window;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!canObserve || reduceMotion) return;
+
+      // 滚动进场：.reveal 由脚本添加，脚本不执行时页面照常完整可见
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+      targets.forEach(function (el) {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+      });
+
+      var navTargets = [].slice.call(document.querySelectorAll('main .section[id]'));
+      var onScreen = [];
+
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var i = onScreen.indexOf(entry.target);
+          if (entry.isIntersecting && i === -1) onScreen.push(entry.target);
+          if (!entry.isIntersecting && i > -1) onScreen.splice(i, 1);
+        });
+
+        var bandY = window.innerHeight / 2;
+        var current = null;
+        onScreen.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top <= bandY && r.bottom >= bandY) current = el;
+        });
+
+        links.forEach(function (link) {
+          if (current && link.getAttribute('href') === '#' + current.id) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+
+      navTargets.forEach(function (el) { navObserver.observe(el); });
+    })();
+  </script>
+</body>
+</html>
