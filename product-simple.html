@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora One 无线降噪耳机：四麦克风双馈降噪、42dB 深度、40 小时续航。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236a8dff'/%3E%3Cstop offset='1' stop-color='%238f6aff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='28' font-weight='600' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="common.css">
+  <title>Aurora One · 商品介绍</title>
+  <style>
+    :root {
+      --card-border: rgba(0, 0, 0, 0.04);
+      --shadow-contact: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-ambient: 0 20px 50px rgba(0, 0, 0, 0.09);
+      --halo-near: rgba(106, 141, 255, 0.16);
+      --halo-far: rgba(143, 106, 255, 0.10);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --card-border: rgba(255, 255, 255, 0.07);
+        --shadow-contact: 0 1px 2px rgba(0, 0, 0, 0.3);
+        --shadow-ambient: 0 20px 50px rgba(0, 0, 0, 0.5);
+        --halo-near: rgba(143, 176, 255, 0.22);
+        --halo-far: rgba(143, 106, 255, 0.12);
+      }
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 380px;
+      padding: 44px 36px 32px;
+      text-align: center;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-contact), var(--shadow-ambient);
+    }
+
+    .product-icon {
+      position: relative;
+      width: 132px;
+      height: 132px;
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    /* 双层光晕：近处实、远处散 */
+    .product-icon::before,
+    .product-icon::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .product-icon::before {
+      background: radial-gradient(closest-side, var(--halo-near), transparent 72%);
+    }
+
+    .product-icon::after {
+      inset: 14%;
+      background: radial-gradient(closest-side, var(--halo-far), transparent 70%);
+      filter: blur(8px);
+    }
+
+    .product-icon svg {
+      position: relative;
+      width: 104px;
+      height: 104px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 28px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .price strong {
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .price-currency {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-right: 1px;
+    }
+
+    .cta {
+      display: block;
+      padding: 14px 22px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(106, 141, 255, 0.28);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(106, 141, 255, 0.36);
+    }
+
+    .cta:active {
+      transform: translateY(0) scale(0.98);
+      box-shadow: 0 4px 12px rgba(106, 141, 255, 0.3);
+    }
+
+    .cta:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    /* 错位入场：图标 → 标签/标题/简介 → 价格 → 按钮，各差 60ms */
+    .rise {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+    }
+
+    .product-icon { animation-delay: 0ms; }
+    .eyebrow { animation-delay: 60ms; }
+    h1 { animation-delay: 120ms; }
+    .desc { animation-delay: 180ms; }
+    .price { animation-delay: 240ms; }
+    .cta-row { animation-delay: 300ms; }
+    .note { animation-delay: 360ms; }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+      .cta {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 36px 26px 28px;
+        border-radius: 20px;
+      }
+      .product-icon {
+        width: 116px;
+        height: 116px;
+        margin-bottom: 24px;
+      }
+      .product-icon svg {
+        width: 92px;
+        height: 92px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="product-icon rise" aria-hidden="true">
+      <svg viewBox="0 0 240 240" role="presentation" focusable="false">
+        <defs>
+          <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6a8dff"></stop>
+            <stop offset="1" stop-color="#8f6aff"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M48 150 V120 a72 72 0 0 1 144 0 v30"
+          fill="none" stroke="url(#aurora)" stroke-width="10" stroke-linecap="round"></path>
+        <rect x="30" y="140" width="40" height="72" rx="20" fill="url(#aurora)"></rect>
+        <rect x="170" y="140" width="40" height="72" rx="20" fill="url(#aurora)"></rect>
+        <rect x="40" y="158" width="20" height="36" rx="10" fill="#ffffff" opacity="0.55"></rect>
+        <rect x="180" y="158" width="20" height="36" rx="10" fill="#ffffff" opacity="0.55"></rect>
+      </svg>
+    </div>
+    <p class="eyebrow rise">无线降噪耳机</p>
+    <h1 class="rise">Aurora One</h1>
+    <p class="desc rise">四麦克风双馈降噪，42dB 深度，40 小时续航。</p>
+    <p class="price rise">
+      <span class="price-label">到手价</span>
+      <strong><span class="price-currency">¥</span>1299</strong>
+    </p>
+    <div class="cta-row rise">
+      <a class="cta" href="product.html">查看详情</a>
+      <p class="note">演示用示例商品，价格为示例数据</p>
+    </div>
+  </main>
+</body>
+</html>
