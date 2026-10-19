@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="张三的个人简历：前端工程师，含工作经历、项目经验、技能与教育背景。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236a8dff'/%3E%3Cstop offset='1' stop-color='%238f6aff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='28' font-weight='600' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+  <title>张三 · 个人简历</title>
+  <style>
+    :root {
+      --bg-start: #f6f7f9;
+      --bg-end: #eef0f4;
+      --card-bg: #ffffff;
+      --text: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --tag-bg: #f2f3f5;
+      --tag-hover: #e8eaf0;
+      --hairline: #e7e9ee;
+      --accent: #6a8dff;
+      --accent-2: #8f6aff;
+      --focus: #6a8dff;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      --grad: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-start: #1c1c1e;
+        --bg-end: #141416;
+        --card-bg: #2c2c2e;
+        --text: #f5f5f7;
+        --text-secondary: #a1a1a6;
+        --tag-bg: #3a3a3c;
+        --tag-hover: #454648;
+        --hairline: #3d3d41;
+        --focus: #8fb0ff;
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 40px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: rgba(106, 141, 255, 0.25);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .resume {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 44px 52px 48px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      animation: rise 0.6s ease both;
+    }
+
+    /* 顶部操作行 */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      background: var(--tag-bg);
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .pill:hover {
+      background: var(--tag-hover);
+      color: var(--text);
+    }
+
+    .pill svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* 头部信息 */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .avatar {
+      flex: none;
+      width: 84px;
+      height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--grad);
+      color: #fff;
+      font-size: 32px;
+      font-weight: 600;
+      user-select: none;
+      box-shadow: 0 6px 18px rgba(106, 141, 255, 0.35);
+    }
+
+    .who {
+      min-width: 0;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .meta a,
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .meta a:hover {
+      color: var(--accent);
+    }
+
+    .meta svg {
+      width: 14px;
+      height: 14px;
+      flex: none;
+      fill: currentColor;
+    }
+
+    .meta .icon-stroke {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* 核心数据 */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 28px 0 4px;
+      list-style: none;
+    }
+
+    .stat {
+      padding: 16px 12px;
+      text-align: center;
+      background: var(--tag-bg);
+      border-radius: 14px;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+
+    /* 区块 */
+    section {
+      margin-top: 32px;
+    }
+
+    h2 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-left: 12px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 15px;
+      border-radius: 2px;
+      background: var(--grad);
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--hairline);
+    }
+
+    p.summary {
+      font-size: 14.5px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    /* 时间线 */
+    .timeline {
+      list-style: none;
+    }
+
+    .timeline > li {
+      position: relative;
+      padding: 0 0 24px 22px;
+    }
+
+    .timeline > li:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline > li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--grad);
+      box-shadow: 0 0 0 3px var(--card-bg);
+    }
+
+    .timeline > li::after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 20px;
+      bottom: 0;
+      width: 2px;
+      background: var(--hairline);
+    }
+
+    .timeline > li:last-child::after {
+      display: none;
+    }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px 14px;
+      flex-wrap: wrap;
+    }
+
+    .item-head h3 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .time {
+      flex: none;
+      padding: 3px 10px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: var(--tag-bg);
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .item-sub {
+      margin: 5px 0 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .points {
+      list-style: none;
+    }
+
+    .points li {
+      position: relative;
+      padding-left: 14px;
+      margin-top: 5px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 5px;
+      height: 5px;
+      border-radius: 1.5px;
+      background: var(--accent);
+      opacity: 0.75;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .stack span {
+      padding: 3px 10px;
+      font-size: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: var(--text-secondary);
+      background: transparent;
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+    }
+
+    /* 技能分组 */
+    .skill-group + .skill-group {
+      margin-top: 14px;
+    }
+
+    .skill-group h3 {
+      margin-bottom: 8px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tags span {
+      padding: 6px 14px;
+      font-size: 13px;
+      background: var(--tag-bg);
+      border-radius: 999px;
+      transition: background 0.2s ease;
+    }
+
+    .tags span:hover {
+      background: var(--tag-hover);
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .resume {
+        animation: none;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .resume {
+        padding: 28px 20px 32px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .meta {
+        justify-content: center;
+      }
+
+      .stat b {
+        font-size: 18px;
+      }
+
+      .stat span {
+        font-size: 11.5px;
+      }
+    }
+
+    /* 打印 / 另存为 PDF：强制浅色、去掉背景装饰 */
+    @media print {
+    body {
+        padding: 0;
+        background: #fff;
+      }
+
+      :root {
+        --bg-start: #fff;
+        --bg-end: #fff;
+        --card-bg: #fff;
+        --text: #111;
+        --text-secondary: #444;
+        --tag-bg: #f4f4f4;
+        --tag-hover: #f4f4f4;
+        --hairline: #ccc;
+        --shadow: none;
+      }
+
+      .resume {
+        max-width: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        animation: none;
+      }
+
+      .topbar {
+        display: none;
+      }
+
+      section,
+      .stats {
+        break-inside: avoid;
+      }
+
+      .timeline > li {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <div class="topbar">
+      <a class="pill" href="index.html">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        返回首页
+      </a>
+      <button class="pill" type="button" onclick="window.print()">
+        <svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/></svg>
+        打印 / 保存 PDF
+      </button>
+    </div>
+
+    <header>
+      <div class="avatar" aria-hidden="true">Z</div>
+      <div class="who">
+        <h1>张三</h1>
+        <p class="role">高级前端工程师 · 5 年经验</p>
+        <div class="meta">
+          <a href="mailto:you@example.com">
+            <svg class="icon-stroke" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            you@example.com
+          </a>
+          <a href="https://github.com/yourname" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            github.com/yourname
+          </a>
+          <span>
+            <svg class="icon-stroke" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            上海 · 在职
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <ul class="stats" aria-label="核心数据">
+      <li class="stat"><b>5 年</b><span>前端开发经验</span></li>
+      <li class="stat"><b>20+</b><span>项目交付</span></li>
+      <li class="stat"><b>40%</b><span>首屏加载优化</span></li>
+    </ul>
+
+    <section>
+      <h2>个人简介</h2>
+      <p class="summary">
+        前端工程师，熟悉现代 JavaScript 与 Web 标准，关注性能、可访问性与工程化。
+        主导过多个从 0 到 1 的 Web 产品，习惯用最简单的方案解决问题，也喜欢在业余时间做小玩意。
+      </p>
+    </section>
+
+    <section>
+      <h2>工作经历</h2>
+      <ul class="timeline">
+        <li>
+          <div class="item-head">
+            <h3>某科技有限公司 · 高级前端工程师</h3>
+            <span class="time">2023.06 — 至今</span>
+          </div>
+          <p class="item-sub">负责数据看板类产品的前端架构与性能优化</p>
+          <ul class="points">
+            <li>主导前端架构升级与组件库建设，统一 3 条业务线的开发规范，团队交付效率提升约 30%。</li>
+            <li>推动性能专项治理，首屏加载时间缩短 40%，核心页面 LCP 稳定在 2s 以内。</li>
+          </ul>
+        </li>
+        <li>
+          <div class="item-head">
+            <h3>某互联网公司 · 前端工程师</h3>
+            <span class="time">2020.07 — 2023.05</span>
+          </div>
+          <p class="item-sub">参与电商与营销活动业务开发</p>
+          <ul class="points">
+            <li>负责活动页面搭建平台的核心模块，沉淀 20+ 通用组件，支撑多次大促流量峰值。</li>
+            <li>建立前端监控与灰度发布流程，线上故障平均定位时间缩短约 50%。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>项目经验</h2>
+      <ul class="timeline">
+        <li>
+          <div class="item-head">
+            <h3>实时数据看板</h3>
+            <span class="time">2024</span>
+          </div>
+          <ul class="points">
+            <li>基于 WebSocket 与虚拟滚动实现万级数据点的流畅渲染，支持自定义图表与深色模式。</li>
+          </ul>
+          <div class="stack">
+            <span>TypeScript</span><span>Canvas</span><span>WebSocket</span><span>虚拟滚动</span>
+          </div>
+        </li>
+        <li>
+          <div class="item-head">
+            <h3>活动搭建平台</h3>
+            <span class="time">2022</span>
+          </div>
+          <ul class="points">
+            <li>可视化拖拽搭建营销页面，活动页面平均开发周期从 3 天降至半天。</li>
+          </ul>
+          <div class="stack">
+            <span>Vue 3</span><span>Vite</span><span>Drag &amp; Drop</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>技能</h2>
+      <div class="skill-group">
+        <h3>语言与基础</h3>
+        <div class="tags">
+          <span>JavaScript (ES2023)</span>
+          <span>TypeScript</span>
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>响应式布局</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>框架与生态</h3>
+        <div class="tags">
+          <span>Vue 3</span>
+          <span>React 18</span>
+          <span>Pinia / Redux</span>
+          <span>Vite</span>
+          <span>Webpack</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>工程与其他</h3>
+        <div class="tags">
+          <span>Node.js</span>
+          <span>Git</span>
+          <span>CI/CD</span>
+          <span>性能优化</span>
+          <span>可访问性</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>教育背景</h2>
+      <ul class="timeline">
+        <li>
+          <div class="item-head">
+            <h3>某大学 · 计算机科学与技术 · 本科</h3>
+            <span class="time">2016.09 — 2020.06</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
