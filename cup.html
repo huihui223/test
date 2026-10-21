@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="暖石 T1 真空保温杯：316 不锈钢双层真空，12 小时保温、24 小时保冷，480ml 仅重 268g，旋薄防漏杯盖，含结构、数据、规格与包装清单。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236a8dff'/%3E%3Cstop offset='1' stop-color='%238f6aff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Crect x='22' y='14' width='20' height='7' rx='3' fill='white'/%3E%3Cpath d='M23 23 h18 v22 a9 9 0 0 1 -18 0 z' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+  <title>暖石 T1 真空保温杯 · 商品介绍</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    :root {
+      --border: rgba(0, 0, 0, 0.08);
+      --bar-bg: rgba(246, 247, 249, 0.82);
+      --halo: rgba(106, 141, 255, 0.3);
+      --card-bg-soft: rgba(255, 255, 255, 0.6);
+      --card-hover-border: rgba(106, 141, 255, 0.35);
+      --shadow-card: 0 14px 34px rgba(0, 0, 0, 0.08);
+      --shadow-fab: 0 10px 28px rgba(0, 0, 0, 0.14);
+      --cup-shadow: rgba(0, 0, 0, 0.12);
+      --float-y: -8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --border: rgba(255, 255, 255, 0.1);
+        --bar-bg: rgba(28, 28, 30, 0.82);
+        --halo: rgba(143, 176, 255, 0.18);
+        --card-bg-soft: rgba(255, 255, 255, 0.04);
+        --card-hover-border: rgba(143, 176, 255, 0.4);
+        --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.5);
+        --shadow-fab: 0 10px 28px rgba(0, 0, 0, 0.55);
+        --cup-shadow: rgba(0, 0, 0, 0.55);
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 72px;
+    }
+
+    body {
+      line-height: 1.6;
+      background-attachment: fixed;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bar-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .anchors {
+      display: flex;
+      gap: 22px;
+    }
+
+    .anchors a {
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+    }
+
+    .anchors a:hover,
+    .anchors a[aria-current="true"] {
+      color: var(--text);
+    }
+
+    .anchors a[aria-current="true"] {
+      font-weight: 600;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+      padding: 96px 0 88px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6.5vw, 68px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .lede {
+      max-width: 32ch;
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .price strong {
+      font-size: clamp(28px, 3vw, 34px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 26px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(106, 141, 255, 0.28);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(106, 141, 255, 0.36);
+    }
+
+    .cta:active {
+      transform: translateY(0) scale(0.98);
+      box-shadow: 0 4px 12px rgba(106, 141, 255, 0.3);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 118%;
+      aspect-ratio: 1;
+      background: radial-gradient(closest-side, var(--halo), transparent 70%);
+      filter: blur(24px);
+      pointer-events: none;
+      animation: haloBreath 5s ease-in-out infinite;
+    }
+
+    @keyframes haloBreath {
+      0%, 100% { opacity: 0.75; transform: scale(0.96); }
+      50% { opacity: 1; transform: scale(1.04); }
+    }
+
+    .hero-visual svg {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      animation: cupFloat 4.5s ease-in-out infinite;
+    }
+
+    @keyframes cupFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(var(--float-y)); }
+    }
+
+    /* 杯口蒸汽 */
+    .steam {
+      fill: none;
+      stroke: #9aa0ad;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: steamRise 2.8s ease-in-out infinite;
+    }
+
+    .steam.s2 { animation-delay: 0.6s; }
+    .steam.s3 { animation-delay: 1.2s; }
+
+    @keyframes steamRise {
+      0% { opacity: 0; transform: translateY(6px); }
+      25% { opacity: 0.7; }
+      100% { opacity: 0; transform: translateY(-6px); }
+    }
+
+    main {
+      counter-reset: section;
+    }
+
+    .section {
+      counter-increment: section;
+      padding: 96px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 32px;
+    }
+
+    .section h2::before {
+      content: counter(section, decimal-leading-zero);
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .pains {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .pain {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .pain-where {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .pain-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .structure {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .structure-text p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 46ch;
+    }
+
+    .structure-visual svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .structure-visual text {
+      font-size: 13px;
+      fill: var(--text-secondary);
+    }
+
+    .structure-visual .leader {
+      stroke: var(--text-secondary);
+    }
+
+    .features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 18px;
+      padding: 26px 24px;
+      background: var(--card-bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--card-hover-border);
+    }
+
+    .feature-icon {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: var(--bar-bg);
+      transition: background 0.22s ease;
+    }
+
+    .feature:hover .feature-icon {
+      background: rgba(106, 141, 255, 0.14);
+    }
+
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .stats {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .stats li {
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+
+    .stat-value {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-value small {
+      font-size: 0.36em;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-left: 4px;
+      color: var(--text-secondary);
+    }
+
+    .stat-label {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 48px;
+    }
+
+    .specs > div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .specs dt {
+      flex: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .specs dd {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .box-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px 28px;
+    }
+
+    .box-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .box-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6a8dff 0%, #8f6aff 100%);
+    }
+
+    .footer {
+      padding: 32px 0 48px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* 回到顶部 */
+    .to-top {
+      position: fixed;
+      right: 28px;
+      bottom: 28px;
+      z-index: 20;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text);
+      box-shadow: var(--shadow-fab);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(8px) scale(0.92);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .to-top.is-show {
+      opacity: 1;
+      transform: none;
+    }
+
+    .to-top svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* 入场动画：.reveal 由脚本添加，脚本未执行时内容照常可见 */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .anchors a,
+      .cta,
+      .feature,
+      .feature-icon,
+      .to-top {
+        transition: none;
+      }
+
+      .hero-visual::before,
+      .hero-visual svg,
+      .steam {
+        animation: none;
+      }
+
+      .steam {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 64px 0 56px;
+      }
+
+      .hero-visual {
+        max-width: 400px;
+      }
+
+      .structure {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .pains {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .specs {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-visual {
+        --float-y: -4px;
+      }
+
+      .hero-visual svg {
+        max-width: 200px;
+      }
+
+      .to-top {
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .anchors {
+        gap: 14px;
+      }
+
+      .anchors a {
+        font-size: 13px;
+      }
+
+      .specs dd {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">暖石 WarmStone</a>
+      <nav class="anchors" aria-label="页面导航">
+        <a href="#pain">痛点</a>
+        <a href="#structure">结构</a>
+        <a href="#features">亮点</a>
+        <a href="#specs">规格</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="eyebrow">316 不锈钢真空保温杯</p>
+          <h1>暖石 T1</h1>
+          <p class="lede">早上灌的热水，到下班还是烫嘴的。</p>
+          <div class="hero-meta">
+            <p class="price">
+              <span class="price-label">到手价</span>
+              <strong>¥129</strong>
+            </p>
+            <a class="cta" href="#specs">查看规格参数</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 240" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="cupMetal" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#c9ccd4"></stop>
+                <stop offset="0.22" stop-color="#f2f3f5"></stop>
+                <stop offset="0.5" stop-color="#d8dbe1"></stop>
+                <stop offset="0.78" stop-color="#f4f5f7"></stop>
+                <stop offset="1" stop-color="#b9bdc6"></stop>
+              </linearGradient>
+              <linearGradient id="cupLid" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#9aa0ad"></stop>
+                <stop offset="0.5" stop-color="#d3d6dd"></stop>
+                <stop offset="1" stop-color="#8f95a2"></stop>
+              </linearGradient>
+            </defs>
+            <!-- 杯底柔和投影 -->
+            <ellipse cx="120" cy="213" rx="58" ry="10" fill="#000000" opacity="0.1"></ellipse>
+            <ellipse cx="120" cy="213" rx="44" ry="6" fill="#000000" opacity="0.1"></ellipse>
+            <!-- 上升蒸汽 -->
+            <path class="steam s1" d="M108 16 q 5 -5 0 -9 q -5 -4 0 -6"></path>
+            <path class="steam s2" d="M120 15 q 5 -5 0 -9 q -5 -4 0 -5"></path>
+            <path class="steam s3" d="M132 16 q 5 -5 0 -9 q -5 -4 0 -6"></path>
+            <g class="cup-body">
+              <!-- 杯盖：顶盖 + 按扣分隔线 -->
+              <rect x="72" y="18" width="96" height="26" rx="11" fill="url(#cupLid)"></rect>
+              <rect x="78" y="22" width="40" height="5" rx="2.5" fill="#ffffff" opacity="0.5"></rect>
+              <line x1="104" y1="22" x2="104" y2="40" stroke="#8f95a2" stroke-width="1" opacity="0.6"></line>
+              <!-- 密封圈 -->
+              <rect x="70" y="42" width="100" height="10" rx="5" fill="#aab0bb"></rect>
+              <!-- 杯身：纵向金属高光带 -->
+              <path d="M78 52 h84 v128 a42 42 0 0 1 -84 0 z" fill="url(#cupMetal)" stroke="rgba(0,0,0,0.12)" stroke-width="1"></path>
+              <rect x="90" y="66" width="9" height="100" rx="4.5" fill="#ffffff" opacity="0.55"></rect>
+              <rect x="146" y="72" width="5" height="88" rx="2.5" fill="#ffffff" opacity="0.3"></rect>
+              <text x="120" y="150" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="600" fill="#8a8f99" letter-spacing="1">T1</text>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section" id="pain">
+        <h2>你一天里的这些瞬间</h2>
+        <ul class="pains">
+          <li class="pain">
+            <p class="pain-where">早高峰的包里</p>
+            <p class="pain-text">杯盖没拧紧，热水渗出来洇湿笔记本和文件，到工位先收拾十分钟。</p>
+          </li>
+          <li class="pain">
+            <p class="pain-where">下午三点的工位</p>
+            <p class="pain-text">早上接的热水早已凉透，想喝口热的，只能再去茶水间排队接水。</p>
+          </li>
+          <li class="pain">
+            <p class="pain-where">泡茶的窄口杯</p>
+            <p class="pain-text">杯口窄、茶垢深，手伸不进去，杯刷够不到底，时间一长总有异味。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="structure">
+        <h2>热量是怎么留下来的</h2>
+        <div class="structure">
+          <div class="structure-text">
+            <p>杯身由内外两层 316 不锈钢拉伸成型，两层之间抽成真空并在内壁镀铜：空气导热的通道被切断，铜膜再把热辐射反射回杯内。官方数据为室温 20℃ 下，95℃ 满杯热水 6 小时约 72℃、12 小时约 52℃；装冰水则可保冷约 24 小时。</p>
+          </div>
+          <div class="structure-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 280" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#c2c6cf"></stop>
+                  <stop offset="0.5" stop-color="#e9ebef"></stop>
+                  <stop offset="1" stop-color="#b6bbc5"></stop>
+                </linearGradient>
+                <linearGradient id="heat" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#6a8dff"></stop>
+                  <stop offset="1" stop-color="#8f6aff"></stop>
+                </linearGradient>
+              </defs>
+              <!-- 双层 U 形杯壁剖面 -->
+              <path d="M110 64 h120 v150 a60 60 0 0 1 -120 0 z" fill="none" stroke="url(#wall)" stroke-width="9"></path>
+              <path d="M130 84 h80 v128 a40 40 0 0 1 -80 0 z" fill="none" stroke="url(#wall)" stroke-width="6" opacity="0.75"></path>
+              <!-- 杯内热气 -->
+              <g fill="none" stroke="url(#heat)" stroke-width="3.5" stroke-linecap="round">
+                <path d="M150 170 q 10 -14 0 -28 t 0 -28 t 0 -26"></path>
+                <path d="M172 170 q 10 -14 0 -28 t 0 -28 t 0 -26"></path>
+                <path d="M194 170 q 10 -14 0 -28 t 0 -28 t 0 -26"></path>
+              </g>
+              <!-- 引线与标注 -->
+              <g class="leader" stroke-width="1.2" fill="none" opacity="0.7">
+                <path d="M105 120 h-40 v6"></path>
+                <path d="M122 130 l-30 38"></path>
+                <path d="M172 70 v-26"></path>
+              </g>
+              <g text-anchor="middle">
+                <text x="52" y="140">外壁</text>
+                <text x="70" y="186">真空层 + 铜膜</text>
+                <text x="172" y="36">热量留在杯中</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <h2>每天用得到的四件事</h2>
+        <ul class="features">
+          <li class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+                <defs>
+                  <linearGradient id="featGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#6a8dff"></stop>
+                    <stop offset="1" stop-color="#8f6aff"></stop>
+                  </linearGradient>
+                </defs>
+                <circle cx="12" cy="12" r="8.5" fill="none" stroke="url(#featGrad)" stroke-width="2"></circle>
+                <path d="M12 7.5 V12 l3 2.5" fill="none" stroke="url(#featGrad)" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div>
+              <h3>12 小时保温</h3>
+              <p>双层真空加铜膜反射，95℃ 热水 12 小时后仍约 52℃，保冷约 24 小时。</p>
+            </div>
+          </li>
+          <li class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M12 3 l7.5 3 v5 c0 4.6 -3.2 8.2 -7.5 10 -4.3 -1.8 -7.5 -5.4 -7.5 -10 v-5 z" fill="none" stroke="url(#featGrad)" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M9 12 l2 2 4 -4.5" fill="none" stroke="url(#featGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <div>
+              <h3>316 母婴级内胆</h3>
+              <p>耐酸碱、不易留味，装咖啡、果茶、运动饮料都放心，可拆茶隔滤茶叶。</p>
+            </div>
+          </li>
+          <li class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M8 10 V7 a4 4 0 0 1 8 0 v3" fill="none" stroke="url(#featGrad)" stroke-width="2" stroke-linecap="round"></path>
+                <rect x="6" y="10" width="12" height="9.5" rx="2.5" fill="none" stroke="url(#featGrad)" stroke-width="2"></rect>
+                <path d="M9.5 10 v2.2 M12 10 v2.2 M14.5 10 v2.2" stroke="url(#featGrad)" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div>
+              <h3>旋薄螺纹防漏</h3>
+              <p>整圈硅胶密封圈加多线螺纹，拧到位不漏水，倒置放包里也安心。</p>
+            </div>
+          </li>
+          <li class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M9 3 h6 v5 l4.5 11 a2 2 0 0 1 -1.8 3 h-11.4 a2 2 0 0 1 -1.8 -3 l4.5 -11 z" fill="none" stroke="url(#featGrad)" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M9 8 h6" stroke="url(#featGrad)" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div>
+              <h3>宽口易清洗</h3>
+              <p>4.5cm 杯口手能直接伸进去，茶隔、杯盖均可拆，杯底硅胶垫防滑静音。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="data">
+        <h2>落到数字上</h2>
+        <ul class="stats">
+          <li>
+            <p class="stat-value"><span class="count" data-count="480">480</span><small>ml</small></p>
+            <p class="stat-label">容量，刚好一上午的水量</p>
+          </li>
+          <li>
+            <p class="stat-value"><span class="count" data-count="12">12</span><small>小时</small></p>
+            <p class="stat-label">95℃ 保温至约 52℃</p>
+          </li>
+          <li>
+            <p class="stat-value"><span class="count" data-count="24">24</span><small>小时</small></p>
+            <p class="stat-label">冰水保冷时长</p>
+          </li>
+          <li>
+            <p class="stat-value"><span class="count" data-count="268">268</span><small>g</small></p>
+            <p class="stat-label">整杯净重</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="specs">
+        <h2>规格参数</h2>
+        <dl class="specs">
+          <div>
+            <dt>容量</dt>
+            <dd>480ml</dd>
+          </div>
+          <div>
+            <dt>内胆材质</dt>
+            <dd>316 不锈钢</dd>
+          </div>
+          <div>
+            <dt>外壁材质</dt>
+            <dd>304 不锈钢</dd>
+          </div>
+          <div>
+            <dt>保温工艺</dt>
+            <dd>双层真空 + 内壁镀铜</dd>
+          </div>
+          <div>
+            <dt>保温时长</dt>
+            <dd>约 12 小时（52℃）</dd>
+          </div>
+          <div>
+            <dt>保冷时长</dt>
+            <dd>约 24 小时</dd>
+          </div>
+          <div>
+            <dt>整杯重量</dt>
+            <dd>268g</dd>
+          </div>
+          <div>
+            <dt>产品尺寸</dt>
+            <dd>φ7.0 × 22.4cm</dd>
+          </div>
+          <div>
+            <dt>杯口直径</dt>
+            <dd>4.5cm</dd>
+          </div>
+          <div>
+            <dt>可选颜色</dt>
+            <dd>雾岩黑 / 云雾白 / 岩松绿</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="box">
+        <h2>包装清单</h2>
+        <ul class="box-list">
+          <li>暖石 T1 杯身 ×1</li>
+          <li>旋薄防漏杯盖 ×1</li>
+          <li>可拆卸茶隔 ×1</li>
+          <li>杯底防滑硅胶垫 ×1</li>
+          <li>杯刷 ×1</li>
+          <li>说明书与保修卡 ×1</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© 2026 暖石 WarmStone · 本页为演示用商品介绍页，商品、参数与价格均为示例数据。</div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="回到顶部" hidden>
+    <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
+  <script>
+    (function () {
+      var canObserve = 'IntersectionObserver' in window;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // 回到顶部：滚动超过约一屏时淡入
+      var toTop = document.querySelector('.to-top');
+      if (toTop) {
+        toTop.removeAttribute('hidden');
+        var toggleTop = function () {
+          toTop.classList.toggle('is-show', window.scrollY > window.innerHeight * 0.8);
+        };
+        window.addEventListener('scroll', toggleTop, { passive: true });
+        toggleTop();
+        toTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+        });
+      }
+
+      if (!canObserve || reduceMotion) return;
+
+      var targets = [].slice.call(document.querySelectorAll('.hero, main .section'));
+      var links = [].slice.call(document.querySelectorAll('.anchors a'));
+
+      // 滚动进场：.reveal 由脚本添加，脚本不执行时页面照常完整可见
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+      targets.forEach(function (el) {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+      });
+
+      var navTargets = [].slice.call(document.querySelectorAll('main .section[id]'));
+      var onScreen = [];
+
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var i = onScreen.indexOf(entry.target);
+          if (entry.isIntersecting && i === -1) onScreen.push(entry.target);
+          if (!entry.isIntersecting && i > -1) onScreen.splice(i, 1);
+        });
+
+        var bandY = window.innerHeight / 2;
+        var current = null;
+        onScreen.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top <= bandY && r.bottom >= bandY) current = el;
+        });
+
+        links.forEach(function (link) {
+          if (current && link.getAttribute('href') === '#' + current.id) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+
+      navTargets.forEach(function (el) { navObserver.observe(el); });
+
+      // 数据计数：进入视口后从 0 增长到终值
+      var counters = [].slice.call(document.querySelectorAll('.count'));
+      var easeOutCubic = function (t) { return 1 - Math.pow(1 - t, 3); };
+
+      var runCount = function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        var duration = 900;
+        var start = null;
+        var step = function (now) {
+          if (start === null) start = now;
+          var t = Math.min((now - start) / duration, 1);
+          el.textContent = String(Math.round(target * easeOutCubic(t)));
+          if (t < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = String(target);
+          }
+        };
+        requestAnimationFrame(step);
+      };
+
+      var countObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          runCount(entry.target);
+          countObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach(function (el) { countObserver.observe(el); });
+    })();
+  </script>
+</body>
+</html>
